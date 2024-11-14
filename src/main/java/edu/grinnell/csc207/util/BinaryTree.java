@@ -137,4 +137,16 @@ public class BinaryTree<T> implements Iterable<T> {
     } // if/else
   } // makeTree(T[], int, int)
 
+    public void  elements01(PrintWriter pen) {
+    elements01Helper(pen, root);
+  }
+
+  void elements01Helper(PrintWriter pen, BinaryTreeNode<T> node) {
+    if (node != null) {
+      pen.println(node.value + " ");
+      elements01Helper(pen, node.left);
+      elements01Helper(pen, node.right);
+    }
+  }
+
 } // class BinaryTree
